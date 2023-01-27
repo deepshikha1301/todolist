@@ -1,8 +1,0 @@
-com\app\todolist\model\TodoStatus.class
-com\app\todolist\service\TaskService.class
-com\app\todolist\model\Task.class
-com\app\todolist\model\Task$TaskBuilder.class
-com\app\todolist\bootstrap\TaskLoader.class
-com\app\todolist\TodolistApplication.class
-com\app\todolist\controller\TaskController.class
-com\app\todolist\repo\TaskRepo.class
