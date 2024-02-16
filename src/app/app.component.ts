@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,24 +6,13 @@ import { FormBuilder, FormControl, FormGroup} from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  taskForm!:FormGroup;
   title = 'todolist';
   taskList:string[] = [];
-
-  constructor(private formBuilder:FormBuilder){}
-
-  ngOnInit(): void{
-    this.taskForm = this.formBuilder.group({
-      taskName: ['','']
-    });
-  }
+  newTask:string = '';
 
   addTask(){
-    this.taskList.push(this.f['taskName'].value); 
-    console.log(this.taskList);
-  }
-
-  get f(){
-    return this.taskForm.controls;
+    console.log(this.newTask);
+    this.taskList.push(this.newTask);
+    this.newTask='';
   }
 }

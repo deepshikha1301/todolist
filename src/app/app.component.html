@@ -1,12 +1,23 @@
-<form [formGroup]="taskForm" class="center">
-  <mat-form-field>
-    <input matInput  placeholder="Ex. Buy books" formControlName="taskName">
-  </mat-form-field>
-  <button mat-raised-button (click)="addTask()">ADD</button>
+<div class="container py-3" style="border: 1px solid black; border-radius: 5px; width:40%">
+  <div class="d-flex justify-content-center">
+    <div class="input-group w-auto">
+      <input 
+      type="text" 
+      placeholder="eg. buy books" 
+      [(ngModel)]="newTask" 
+      class="form-control">
+    <button 
+      (click)="addTask()" 
+      class="btn btn-primary"
+      type="button">
+      <i class="bi bi-plus-square-fill"></i>
+    </button>
+    </div>
+  </div>
   <br>
   <table>
-    <tr *ngFor="let task of taskList">
+    <tr *ngFor="let task of taskList" style="border: 1px solid black;">
       <td>{{task}}</td>
     </tr>
   </table>
-</form>
+</div>
