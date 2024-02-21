@@ -1,0 +1,14 @@
+<form class="container py-3" style="border: 1px solid #dee2e6; border-radius: 5px; max-width:40%">
+    <div class="form-outline mb-4">
+        <input type="email" id="emailId" class="form-control">
+        <label class="form-label" for="emailId">Email address</label>
+    </div>
+    <div class="form-outline mb-4">
+        <input type="password" id="pwd" class="form-control">
+        <label class="form-label" for="pwd">Password</label>
+    </div>
+    <button type="button" class="btn btn-primary btn-block mb-4">LOGIN</button>
+    <div>
+        <p>Don't have an account? <a [routerLink]="['/register']" >Register</a></p>
+    </div>
+</form>

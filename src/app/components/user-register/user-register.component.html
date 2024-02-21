@@ -1,0 +1,19 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="container py-3" style="border: 1px solid #dee2e6; border-radius: 5px; max-width:40%">
+    <div class="form-outline mb-4">
+        <input type="email" id="emailId" class="form-control" formControlName="emailAddress">
+        <label class="form-label" for="emailId">Email address</label>
+        <p style="color: red; font-size: 12px;" *ngIf="registerForm.get('emailAddress')?.invalid && registerForm.get('emailAddress')?.touched">Invalid email</p>
+    </div>
+    <div class="form-outline mb-4">
+        <input type="password" id="pwd" class="form-control" formControlName="passwordEntered">
+        <label class="form-label" for="pwd">Password</label>
+        <p style="color: red; font-size: 12px;" *ngIf="registerForm.get('passwordEntered')?.invalid && registerForm.get('passwordEntered')?.touched">Password must have atleast 8 characters</p>
+    </div>
+    <div class="form-outline mb-4">
+        <input type="password" id="pwdConfirm" class="form-control" formControlName="passwordConfirm">
+        <label class="form-label" for="pwdConfirm">Confirm Password</label>
+        <p style="color: red; font-size: 12px;" *ngIf="registerForm.get('passwordConfirm')?.invalid && registerForm.get('passwordConfirm')?.touched">Password must have atleast 8 characters</p>
+    </div>
+    <p style="color: red; font-size: 12px;" *ngIf="!passwordEqual">Passwords did not match</p>
+    <button type="submit" class="btn btn-primary btn-block mb-4">REGISTER</button>
+</form>

@@ -1,0 +1,10 @@
+.center{
+    width: 40%;
+    margin: auto;
+    border:1px solid black;
+    border-radius: 6px;
+    position:absolute;
+    left: 50%;
+    top:30%;
+    transform: translate(-50%, -50%);
+}
